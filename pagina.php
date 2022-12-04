@@ -15,32 +15,31 @@
      El valor mínimo contenido y su posición en la matriz.
      El valor medio de todos los valores contenidos en la matriz. -->
     <?php
+    include "funlib.php";
+
+    echo "<table border = 1>";
+    echo "<tr>";
+    echo "  <td> Pablo  </td>";
+    echo "  <td> Machado </td>";
+    echo "</tr>";
+    echo "<td> " . "Ejercicio" . "</td>";
+    echo "<td> " . "anexo3-pag29-ej3" . "</td>";
+    echo "</tr>";
+    echo "<td> " . "maximoMinimoMedia();" . "</td>";
+    echo "<td> " . "El valor máximo es 10 y su posición es 9
+    La media es 5.5
+    El valor mínimo es 0 y su posición es 0" . "</td>";
+    echo "</tr>";
+    echo "</table>";
+
+
     $array = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     $max = 0;
     $min = 0;
     $media = 0;
-    function maximoMinimoMedia($array) //Determina el valor maximo, minimo y la media del array
-    {
-        $max = 0; //Valor maximo
-        $min = 0;   //Valor minimo
-        $media = 0; //Valor medio
-        for ($i = 0; $i < count($array); $i++) { //Recorre el array
-            if ($array[$i] > $max) { //Si el valor del array es mayor que el maximo
-                $max = $array[$i]; //El maximo es el valor del array
-            }
-            if ($array[$i] < $min) { //Si el valor del array es menor que el minimo
-                $min = $array[$i]; //El minimo es el valor del array
-            }
-            $media += $array[$i]; //Suma todos los valores del array
-        }
-        $media = $media / count($array); //Divide la suma de los valores entre el numero de valores
-
-        echo "El valor máximo es $max y su posición es " . array_search($max, $array) . "<br>";
-        echo "El valor mínimo es $min y su posición es " . array_search($min, $array) . "<br>";
-        echo "El valor medio es $media";
-    }
+   
     maximoMinimoMedia($array);
-?>
+    ?>
 </body>
 
 </html>

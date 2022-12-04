@@ -37,7 +37,7 @@
     $max = 0;
     $min = 0;
     $media = 0;
-   
+
     maximoMinimoMedia($array);
     ?>
 </body>
